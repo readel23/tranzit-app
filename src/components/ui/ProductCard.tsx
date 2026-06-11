@@ -1,4 +1,6 @@
 import { useCartStore } from '../../store/useCartStore';
+import { useLanguageStore } from '../../store/useLanguageStore';
+import { translations } from '../../i18n/translations';
 import { Plus, Minus, ShoppingBag } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -16,18 +18,23 @@ export default function ProductCard({ id, image, title, currentPrice, unit }: Pr
   const updateQuantity = useCartStore((state) => state.updateQuantity);
   const removeFromCart = useCartStore((state) => state.removeFromCart);
   const items = useCartStore((state) => state.items);
+  const { language } = useLanguageStore();
+  const t = translations[language];
 
   const cartItem = items.find((item) => item.id === id);
 
   const handleAdd = () => {
+    if (window.navigator.vibrate) window.navigator.vibrate(10);
     addToCart({ id, image, title, price: currentPrice, unit });
   };
 
   const handleIncrease = () => {
+    if (window.navigator.vibrate) window.navigator.vibrate(10);
     updateQuantity(id, 1);
   };
 
   const handleDecrease = () => {
+    if (window.navigator.vibrate) window.navigator.vibrate(10);
     if (cartItem && cartItem.quantity > 1) {
       updateQuantity(id, -1);
     } else {
@@ -63,7 +70,7 @@ export default function ProductCard({ id, image, title, currentPrice, unit }: Pr
         
         {/* Unit Badge */}
         <span className="absolute top-2 left-2 text-[10px] bg-white/90 backdrop-blur-sm shadow-sm text-gray-500 font-bold px-2 py-0.5 rounded-full border border-gray-100">
-          1 {unit}
+          1 {unit === 'кг' ? t.kg : t.unit}
         </span>
       </div>
 
@@ -108,7 +115,7 @@ export default function ProductCard({ id, image, title, currentPrice, unit }: Pr
                   animate={{ y: 0, opacity: 1 }}
                   className="text-xs font-black tracking-tight px-1 tabular-nums min-w-[2.5rem] text-center"
                 >
-                  {cartItem.quantity} {unit}
+                  {cartItem.quantity} {unit === 'кг' ? t.kg : t.unit}
                 </motion.span> 
                 
                 {/* Increase Button */}
@@ -128,7 +135,7 @@ export default function ProductCard({ id, image, title, currentPrice, unit }: Pr
                 className="w-full h-9 bg-gray-50 hover:bg-emerald-55 border border-gray-100 hover:border-emerald-200 text-emerald-600 hover:text-white rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-200"
               >
                 <Plus size={14} className="stroke-[2.5]" />
-                <span>Добавить</span>
+                <span>{t.add}</span>
               </motion.button>
             )}
           </AnimatePresence>

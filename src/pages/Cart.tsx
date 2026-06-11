@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCartStore } from '../store/useCartStore';
 import { useAuthStore } from '../store/useAuthStore';
+import { useLanguageStore } from '../store/useLanguageStore';
+import { translations } from '../i18n/translations';
 import { db, auth } from '../firebase';
 import { doc, getDoc, collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import products from '../db.json'; 
@@ -22,6 +24,8 @@ import { motion, AnimatePresence } from 'motion/react';
 export default function Cart() {
   const { items, updateQuantity, removeFromCart, clearCart, getTotalPrice } = useCartStore();
   const { isLoggedIn, user } = useAuthStore();
+  const { language } = useLanguageStore();
+  const t = translations[language];
   
   const totalPrice = getTotalPrice();
   const navigate = useNavigate();
@@ -135,15 +139,15 @@ export default function Cart() {
         >
           <ShoppingCart size={32} />
         </motion.div>
-        <h2 className="text-lg font-black text-gray-800 tracking-tight">Ваша корзина пуста</h2>
+        <h2 className="text-lg font-black text-gray-800 tracking-tight">{language === 'ru' ? "Ваша корзина пуста" : "Себетіңіз бос"}</h2>
         <p className="text-xs text-gray-400 max-w-[240px] mt-2 mb-6">
-          Похоже, вы еще ничего не добавили. Перейдите в каталог продуктов, чтобы выбрать свежие продукты.
+          {language === 'ru' ? "Похоже, вы еще ничего не добавили. Перейдите в каталог продуктов, чтобы выбрать свежие продукты." : "Әлі ештеңе қоспаған сияқтысыз. Жаңа өнімдерді таңдау үшін каталогқа өтіңіз."}
         </p>
         <Link 
           to="/catalog" 
           className="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white font-bold py-3 px-8 rounded-xl text-xs transition-all shadow-sm"
         >
-          <span>В каталог</span>
+          <span>{language === 'ru' ? "В каталог" : "Каталогқа"}</span>
           <ArrowRight size={14} className="stroke-[3]" />
         </Link>
       </div>
@@ -156,8 +160,8 @@ export default function Cart() {
       {/* HEADER SECTION */}
       <div className="flex items-center justify-between px-1 mt-2">
         <div className="flex flex-col">
-          <h1 className="text-lg font-black text-gray-800 tracking-tight leading-tight">Ваша корзина</h1>
-          <span className="text-[11px] text-gray-400 font-bold uppercase tracking-wider">{items.length} позиций</span>
+          <h1 className="text-lg font-black text-gray-800 tracking-tight leading-tight">{t.yourCart}</h1>
+          <span className="text-[11px] text-gray-400 font-bold uppercase tracking-wider">{items.length} {t.positions}</span>
         </div>
         
         <button 
@@ -165,7 +169,7 @@ export default function Cart() {
           className="flex items-center gap-1.5 text-[11px] font-black text-rose-500 hover:text-rose-600 cursor-pointer p-2 rounded-lg hover:bg-rose-50 transition-colors"
         >
           <Trash2 size={13} />
-          <span>Очистить</span>
+          <span>{t.clear}</span>
         </button>
       </div>
 
@@ -175,7 +179,7 @@ export default function Cart() {
           className="flex justify-between items-center cursor-pointer py-1" 
           onClick={() => setIsProductsOpen(!isProductsOpen)}
         >
-          <span className="text-xs font-black text-gray-700 uppercase tracking-wider">Выбранные товары</span>
+          <span className="text-xs font-black text-gray-700 uppercase tracking-wider">{t.selectedProducts}</span>
           <span className={`text-xs text-neutral-400 font-bold transition-transform duration-300 ${isProductsOpen ? 'rotate-180' : ''}`}>
             ▲
           </span>
@@ -251,7 +255,7 @@ export default function Cart() {
       {/* FINAL RECEIPT TOTAL CARD */}
       <div className="bg-gradient-to-r from-emerald-500 to-green-600 rounded-3xl p-5 text-white flex justify-between items-center shadow-lg shadow-emerald-500/10">
         <span className="text-xs font-extrabold uppercase tracking-wider text-emerald-100">
-          Итоговая цена
+          {t.totalPrice}
         </span>
         <span className="text-2xl font-black tracking-tight tabular-nums">
           {formatPrice(Math.round(totalPrice))}
@@ -261,7 +265,7 @@ export default function Cart() {
       {/* DELIVERY ADDRESS BLOCK */}
       <div className="bg-white border border-gray-100 p-4 rounded-3xl flex flex-col gap-2.5 shadow-sm">
         <span className="text-[10px] font-extrabold text-gray-400 uppercase tracking-wider">
-          Адрес доставки
+          {t.deliveryAddress}
         </span>
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-100/50">
@@ -272,12 +276,12 @@ export default function Cart() {
               {user 
                 ? user.isIp && user.city
                   ? `${user.city}, ${user.address || ''}`.replace(/^,\s*/, '')
-                  : user.address || 'Не указан'
-                : 'Не указан'}
+                  : user.address || t.notSpecified
+                : t.notSpecified}
             </span>
             {user?.isIp && user?.ipName && (
               <span className="text-[9px] text-emerald-600 font-black uppercase tracking-wider mt-0.5">
-                Организация: {user.ipName}
+                {t.organization}: {user.ipName}
               </span>
             )}
           </div>
@@ -288,10 +292,10 @@ export default function Cart() {
       <div className="bg-white border border-gray-100 p-4 rounded-3xl flex flex-col gap-2.5 shadow-sm">
         <div className="flex items-center gap-1.5">
           <MessageSquare className="text-gray-400 shrink-0" size={15} />
-          <h4 className="text-xs font-extrabold text-gray-800 tracking-tight">Комментарии для водителя курьера</h4>
+          <h4 className="text-xs font-extrabold text-gray-800 tracking-tight">{t.driverComment}</h4>
         </div>
         <textarea
-          placeholder="Например: Пожалуйста, оставьте продукты у входа, при звонке сообщите, что вы из Транзита..."
+          placeholder={t.commentPlaceholder}
           value={comment}
           onChange={(e) => setComment(e.target.value)}
           rows={3}
@@ -306,7 +310,7 @@ export default function Cart() {
             <div className="bg-emerald-50 p-1 rounded-lg border border-emerald-100">
               <Sparkles className="text-emerald-500 fill-emerald-50" size={13} />
             </div>
-            <h3 className="text-sm font-extrabold text-gray-800 tracking-tight">Может быть пригодится?</h3>
+            <h3 className="text-sm font-extrabold text-gray-800 tracking-tight">{t.mightBeUseful}</h3>
           </div>
           
           <div className="flex gap-3 overflow-x-auto pb-1/5 scrollbar-none snap-x snap-mandatory">
@@ -331,9 +335,9 @@ export default function Cart() {
           <div className="flex gap-2 items-start">
             <ShieldAlert className="text-amber-600 shrink-0 mt-0.5" size={17} />
             <div className="flex flex-col">
-              <p className="text-xs font-bold text-amber-900 leading-tight">Требуется быстрая авторизация</p>
+              <p className="text-xs font-bold text-amber-900 leading-tight">{t.authRequired}</p>
               <p className="text-[11px] text-amber-700/90 leading-normal mt-0.5">
-                Пожалуйста, войдите в профиль с вашим номером телефона, чтобы сохранить адрес доставки и подтвердить заказ напрямую оператору.
+                {t.authRequiredDesc}
               </p>
             </div>
           </div>
@@ -341,7 +345,7 @@ export default function Cart() {
             to="/profile" 
             className="w-full bg-amber-500 hover:bg-amber-600 active:scale-95 text-white py-2.5 rounded-xl text-xs font-extrabold text-center transition-all mt-1"
           >
-            Войти по номеру телефона →
+            {t.loginBtn} →
           </Link>
         </div>
       )}
@@ -351,11 +355,9 @@ export default function Cart() {
           <div className="flex gap-2 items-start">
             <AlertCircle className="text-amber-600 shrink-0 mt-0.5" size={17} />
             <div className="flex flex-col">
-              <p className="text-xs font-bold text-amber-900 leading-tight">Профиль заполнен не полностью</p>
+              <p className="text-xs font-bold text-amber-900 leading-tight">{t.profileIncomplete}</p>
               <p className="text-[11px] text-amber-700/90 leading-normal mt-0.5">
-                {!user?.address || user.address.trim() === '' 
-                  ? "Для отправки товаров курьерской доставкой TRANZIT укажите точный домашний адрес." 
-                  : "Для оптовых отправок укажите название ТОО / ИП и ваш населенный пункт."}
+                {t.profileIncompleteDesc}
               </p>
             </div>
           </div>
@@ -363,7 +365,7 @@ export default function Cart() {
             to="/profile" 
             className="w-full bg-amber-500 hover:bg-amber-600 active:scale-95 text-white py-2.5 rounded-xl text-xs font-extrabold text-center transition-all mt-1"
           >
-            Заполнить адрес доставки в профиле →
+            {t.fillProfileBtn} →
           </Link>
         </div>
       )}
@@ -382,14 +384,14 @@ export default function Cart() {
             }}
           >
             <span className="tabular-nums font-extrabold text-sm">
-              {isProfileIncomplete ? 'Инфо' : formatPrice(Math.round(totalPrice))}
+              {isProfileIncomplete ? (language === 'ru' ? 'Инфо' : 'Ақпарат') : formatPrice(Math.round(totalPrice))}
             </span>
             <span className="tracking-wide uppercase font-black text-[11px] flex items-center gap-1">
               {isSubmitting 
-                ? 'Оформление...' 
+                ? t.saving
                 : isProfileIncomplete 
-                  ? 'Заполнить профиль' 
-                  : 'Оформить заказ на дом'}
+                  ? t.fillProfileBtn
+                  : t.checkout}
               <ArrowRight size={13} className="stroke-[3]" />
             </span>
           </button>
@@ -406,23 +408,23 @@ export default function Cart() {
             className="bg-white rounded-3xl p-6 max-w-sm w-full text-center shadow-lg border border-gray-100 flex flex-col gap-4"
           >
             <h2 className="text-base font-black text-gray-800 leading-snug">
-              Очистить всю корзину?
+              {language === 'ru' ? 'Очистить всю корзину?' : 'Себетті толық тазалау?'}
             </h2>
             <p className="text-xs text-gray-400 leading-normal">
-              Все добавленные продукты будут безвозвратно удалены. Оставить список покупок?
+              {language === 'ru' ? 'Все добавленные продукты будут безвозвратно удалены. Оставить список покупок?' : 'Барлық қосылған өнімдер қайтарылмайтын болып жойылады. Сатып алу тізімін қалдыру керек пе?'}
             </p>
             <div className="flex gap-3 mt-1.5">
               <button 
                 onClick={() => setIsClearModalOpen(false)}
                 className="flex-grow py-3 bg-gray-100 hover:bg-gray-200 rounded-xl text-xs font-bold text-gray-600 cursor-pointer active:scale-95 transition-all"
               >
-                Оставить
+                {language === 'ru' ? 'Оставить' : 'Қалдыру'}
               </button>
               <button 
                 onClick={handleConfirmClear}
                 className="flex-grow py-3 bg-rose-500 hover:bg-rose-600 rounded-xl text-xs font-bold text-white cursor-pointer active:scale-95 transition-all"
               >
-                Удалить всё
+                {language === 'ru' ? 'Удалить всё' : 'Бәрін жою'}
               </button>
             </div>
           </motion.div>
@@ -441,23 +443,23 @@ export default function Cart() {
               <ShoppingBag size={21} />
             </div>
             <h2 className="text-base font-black text-gray-800 leading-snug">
-              Оформить заказ в TRANZIT?
+              {language === 'ru' ? 'Оформить заказ в TRANZIT?' : 'TRANZIT-те тапсырыс беру?'}
             </h2>
             <p className="text-xs text-gray-400 leading-normal">
-              Наш оператор получит детали вашего заказа ({formatPrice(Math.round(totalPrice))}) и мгновенно соберет его к отправке курьером.
+              {language === 'ru' ? `Наш оператор получит детали вашего заказа (${formatPrice(Math.round(totalPrice))}) и мгновенно соберет его к отправке курьером.` : `Біздің оператор тапсырысыңыздың егжей-тегжейлерін (${formatPrice(Math.round(totalPrice))}) алады және оны курьермен жіберу үшін бірден жинайды.`}
             </p>
             <div className="flex gap-3 mt-1.5">
               <button 
                 onClick={() => setIsCheckoutModalOpen(false)}
                 className="flex-grow py-3 bg-gray-100 hover:bg-gray-200 rounded-xl text-xs font-bold text-gray-600 cursor-pointer active:scale-95 transition-all"
               >
-                Отмена
+                {language === 'ru' ? 'Отмена' : 'Болдырмау'}
               </button>
               <button 
                 onClick={handleCheckout}
                 className="flex-grow py-3 bg-emerald-500 hover:bg-emerald-600 rounded-xl text-xs font-bold text-white cursor-pointer active:scale-95 transition-all"
               >
-                Подтвердить
+                {language === 'ru' ? 'Подтвердить' : 'Растау'}
               </button>
             </div>
           </motion.div>

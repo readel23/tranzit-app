@@ -1,10 +1,14 @@
 import { NavLink } from 'react-router-dom';
 import { useCartStore } from '../../store/useCartStore';
+import { useLanguageStore } from '../../store/useLanguageStore';
+import { translations } from '../../i18n/translations';
 import { Home, Grid, ShoppingBag, User } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function BottomNav() {
   const items = useCartStore((state) => state.items);
+  const { language } = useLanguageStore();
+  const t = translations[language];
   
   // Count the total number of items in the cart (sum of quantities or unique positions)
   // Let's count active items length (unique product types) as requested
@@ -23,7 +27,7 @@ export default function BottomNav() {
         {({ isActive }) => (
           <>
             <Home size={21} className={isActive ? 'stroke-[2.5px]' : 'stroke-2'} />
-            <span className="text-[10px] tracking-tight">Главная</span>
+            <span className="text-[10px] tracking-tight">{t.home}</span>
             {isActive && (
               <motion.div 
                 layoutId="bottom-nav-indicator" 
@@ -46,7 +50,7 @@ export default function BottomNav() {
         {({ isActive }) => (
           <>
             <Grid size={21} className={isActive ? 'stroke-[2.5px]' : 'stroke-2'} />
-            <span className="text-[10px] tracking-tight">Каталог</span>
+            <span className="text-[10px] tracking-tight">{t.catalog}</span>
             {isActive && (
               <motion.div 
                 layoutId="bottom-nav-indicator" 
@@ -80,7 +84,7 @@ export default function BottomNav() {
                 </motion.span>
               )}
             </div>
-            <span className="text-[10px] tracking-tight">Корзина</span>
+            <span className="text-[10px] tracking-tight">{t.cart}</span>
             {isActive && (
               <motion.div 
                 layoutId="bottom-nav-indicator" 
@@ -103,7 +107,7 @@ export default function BottomNav() {
         {({ isActive }) => (
           <>
             <User size={21} className={isActive ? 'stroke-[2.5px]' : 'stroke-2'} />
-            <span className="text-[10px] tracking-tight">Профиль</span>
+            <span className="text-[10px] tracking-tight">{t.profile}</span>
             {isActive && (
               <motion.div 
                 layoutId="bottom-nav-indicator" 
