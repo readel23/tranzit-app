@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ProductCard from '../components/ui/ProductCard';
+import Skeleton from '../components/ui/Skeleton';
+import { useLanguageStore } from '../store/useLanguageStore';
+import { translations } from '../i18n/translations';
 import products from '../db.json'; 
 import { db } from '../firebase';
 import { doc, getDoc } from 'firebase/firestore';
@@ -22,6 +25,8 @@ const QUICK_CATEGORIES: CategoryPill[] = [
 ];
 
 export default function Home() {
+  const { language } = useLanguageStore();
+  const t = translations[language];
   const [promoProducts, setPromoProducts] = useState<any[]>([]);
   const [recProducts, setRecProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -29,8 +34,8 @@ export default function Home() {
 
   // Состояние для динамических баннеров с дефолтными значениями по умолчанию
   const [banners, setBanners] = useState<any[]>([
-    { title: "Свежие продукты с доставкой", subtitle: "Привезем в п. Осакаровка в течение дня", action: "В каталог", link: "/catalog", icon: "🚀" },
-    { title: "Ароматный чай и сладости", subtitle: "Широкий выбор элитного пакетированного чая", action: "Смотреть", link: "/category/bakery", icon: "☕" }
+    { title: language === 'ru' ? "Свежие продукты с доставкой" : "Жаңа өнімдерді жеткізу", subtitle: language === 'ru' ? "Привезем в п. Осакаровка в течение дня" : "Осакаровка к. күні бойы жеткіземіз", action: t.goToCatalog, link: "/catalog", icon: "🚀" },
+    { title: language === 'ru' ? "Ароматный чай и сладости" : "Хош иісті шай және тәттілер", subtitle: language === 'ru' ? "Широкий выбор элитного пакетированного чая" : "Элиталық пакеттелген шайдың кең таңдауы", action: t.view, link: "/category/bakery", icon: "☕" }
   ]);
   const [currentBanner, setCurrentBanner] = useState(0);
 
@@ -98,7 +103,7 @@ export default function Home() {
             <div className="flex justify-between items-start">
               <div className="flex flex-col gap-1 pr-2">
                 <span className="text-[10px] tracking-wider uppercase font-extrabold text-emerald-400 bg-emerald-900/50 border border-emerald-800 px-2 py-0.5 rounded-full inline-block w-max">
-                  Транзит Маркет Доставка
+                  {t.tranzitDelivery}
                 </span>
                 <motion.h2 
                   key={currentBanner}
@@ -144,28 +149,44 @@ export default function Home() {
 
       {/* 2. QUICK CATEGORY PILLS */}
       <div className="flex flex-col gap-2">
-        <h3 className="text-sm font-extrabold text-gray-800 tracking-tight">Категории</h3>
+        <h3 className="text-sm font-extrabold text-gray-800 tracking-tight">{t.categories}</h3>
         <div className="flex gap-2.5 overflow-x-auto pb-1.5 scrollbar-thin scrollbar-thumb-gray-200">
-          {QUICK_CATEGORIES.map((cat, idx) => (
-            <button 
-              key={idx}
-              onClick={() => navigate(`/category/${cat.slug}`)}
-              className={`flex items-center gap-1.5 px-3.5 py-2.5 rounded-2xl bg-gradient-to-r ${cat.gradient} border border-gray-100 font-black text-xs whitespace-nowrap cursor-pointer active:scale-95 transition-all shadow-sm`}
-            >
-              <span className="text-sm">{cat.emoji}</span>
-              <span>{cat.title}</span>
-            </button>
-          ))}
+          {QUICK_CATEGORIES.map((cat, idx) => {
+             // Localize category titles
+             const localizedTitles: any = {
+               "Овощи & Зелень": language === 'ru' ? "Овощи & Зелень" : "Көкөністер & Көк шөп",
+               "Молоко & Яйца": language === 'ru' ? "Молоко & Яйца" : "Сүт & Жұмыртқа",
+               "Хлеб & Чай": language === 'ru' ? "Хлеб & Чай" : "Нан & Шай",
+               "Мясо & Птица": language === 'ru' ? "Мясо & Птица" : "Ет & Құс"
+             };
+             return (
+               <button
+                 key={idx}
+                 onClick={() => navigate(`/category/${cat.slug}`)}
+                 className={`flex items-center gap-1.5 px-3.5 py-2.5 rounded-2xl bg-gradient-to-r ${cat.gradient} border border-gray-100 font-black text-xs whitespace-nowrap cursor-pointer active:scale-95 transition-all shadow-sm`}
+               >
+                 <span className="text-sm">{cat.emoji}</span>
+                 <span>{localizedTitles[cat.title] || cat.title}</span>
+               </button>
+             );
+          })}
         </div>
       </div>
 
       {/* 3. PROMO DISCOUNTS COLLECTION */}
       {loading ? (
-        <div className="space-y-3">
-          <div className="h-6 w-1/3 bg-gray-100 rounded-lg animate-pulse" />
-          <div className="grid grid-cols-2 gap-3">
+        <div className="flex flex-col gap-3">
+          <Skeleton className="h-6 w-1/3" />
+          <div className="grid grid-cols-2 gap-3.5">
             {[1, 2, 3, 4].map(n => (
-              <div key={n} className="h-44 bg-gray-100 rounded-3xl animate-pulse" />
+              <div key={n} className="bg-white rounded-2xl border border-gray-100 p-3 flex flex-col gap-3 h-60">
+                <Skeleton className="w-full aspect-square" />
+                <div className="flex flex-col gap-2">
+                  <Skeleton className="h-3 w-3/4" />
+                  <Skeleton className="h-4 w-1/2" />
+                  <Skeleton className="h-8 w-full" />
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -178,11 +199,11 @@ export default function Home() {
                   <Flame className="text-rose-500 fill-rose-500" size={16} />
                 </div>
                 <h2 className="text-base font-black text-gray-800 tracking-tight">
-                  Супер-скидки
+                  {t.superDiscounts}
                 </h2>
               </div>
               <span className="text-[10px] bg-rose-50 text-rose-600 font-extrabold px-2 py-0.5 rounded-full border border-rose-100">
-                Горячие цены
+                {t.hotPrices}
               </span>
             </div>
 
@@ -210,7 +231,7 @@ export default function Home() {
               <Star className="text-amber-500 fill-amber-500" size={16} />
             </div>
             <h2 className="text-base font-black text-gray-800 tracking-tight">
-              Рекомендуем
+              {t.recommend}
             </h2>
           </div>
 
@@ -233,12 +254,12 @@ export default function Home() {
       {!loading && promoProducts.length === 0 && recProducts.length === 0 && (
         <div className="text-center p-12 bg-gray-50 border border-gray-100 rounded-3xl flex flex-col items-center gap-2">
           <ShoppingBag className="text-gray-300" size={40} />
-          <p className="text-xs font-bold text-gray-500">Специальные товары временно распроданы</p>
+          <p className="text-xs font-bold text-gray-500">{t.soldOut}</p>
           <button 
             onClick={() => navigate('/catalog')} 
             className="text-xs font-bold text-emerald-600 underline mt-1"
           >
-            Перейти в каталог продуктов
+            {t.goToCatalog}
           </button>
         </div>
       )}

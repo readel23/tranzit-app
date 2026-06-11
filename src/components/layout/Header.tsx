@@ -1,10 +1,14 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useSearchStore } from '../../store/useSearchStore';
-import { Search, X } from 'lucide-react'; // MapPin удален
+import { useLanguageStore } from '../../store/useLanguageStore';
+import { translations } from '../../i18n/translations';
+import { Search, X, Languages } from 'lucide-react'; // MapPin удален
 
 export default function Header() {
   const { searchQuery, setSearchQuery } = useSearchStore();
+  const { language, setLanguage } = useLanguageStore();
+  const t = translations[language];
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -36,6 +40,14 @@ export default function Header() {
               TRANZIT
             </span>
           </div>
+
+          <button
+            onClick={() => setLanguage(language === 'ru' ? 'kk' : 'ru')}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gray-50 border border-gray-100 text-[10px] font-black text-gray-600 hover:bg-emerald-50 hover:text-emerald-600 transition-all active:scale-95 cursor-pointer"
+          >
+            <Languages size={14} />
+            <span className="uppercase">{language === 'ru' ? 'KK' : 'RU'}</span>
+          </button>
         </div>
 
         {/* Search Input Bar */}
@@ -43,7 +55,7 @@ export default function Header() {
           <Search className="absolute left-3.5 text-gray-400 pointer-events-none" size={17} />
           <input 
             type="text" 
-            placeholder="Искать любимые продукты..." 
+            placeholder={t.searchPlaceholder}
             className="w-full pl-10 pr-9 py-2.5 rounded-xl border-0 bg-gray-100 text-sm font-medium text-gray-800 placeholder-gray-400 focus:bg-white focus:ring-2 focus:ring-emerald-55 focus:shadow-sm outline-none transition-all duration-200"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
