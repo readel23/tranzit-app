@@ -11,12 +11,23 @@ export default defineConfig(() => {
       tailwindcss(),
       VitePWA({
         registerType: 'autoUpdate',
+        injectRegister: 'auto',
+        includeAssets: ['icon.svg'],
         manifest: {
           name: 'Tranzit Market',
           short_name: 'Tranzit',
           description: 'Свежие продукты с доставкой в Осакаровке',
           theme_color: '#10b981',
-          icons: []
+          background_color: '#ffffff',
+          display: 'standalone',
+          icons: [
+            {
+              src: 'icon.svg',
+              sizes: '512x512',
+              type: 'image/svg+xml',
+              purpose: 'any maskable'
+            }
+          ]
         }
       })
     ],
