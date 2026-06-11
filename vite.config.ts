@@ -6,11 +6,11 @@ import {defineConfig} from 'vite';
 export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
+    base: '/tranzit-app/',
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
       },
-    base: "./",
     },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
