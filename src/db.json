@@ -1,0 +1,706 @@
+[
+  {
+    "id": 9.0,
+    "title": "Чай черный пакетированный \"Принцесса ЯВА\" Каркадэ",
+    "price": 625.0,
+    "unit": "шт",
+    "image": "https://main-cdn.sbermegamarket.ru/big1/hlr-system/-10/285/344/853/301/812/100024257077b0.jpg",
+    "category": "bakery"
+  },
+  {
+    "id": 11.0,
+    "title": "Чай черный пакетированный \"Принцесса ЯВА\" THYME AND MINT",
+    "price": 610.0,
+    "unit": "шт",
+    "image": "https://main-cdn.sbermegamarket.ru/big2/hlr-system/-10/285/085/353/101/858/100024257083b3.jpg",
+    "category": "bakery"
+  },
+  {
+    "id": 12.0,
+    "title": "Чай черный пакетированный \"TESS\" CEYLON",
+    "price": 780.0,
+    "unit": "шт",
+    "image": "https://avatars.mds.yandex.net/get-mpic/1863454/img_id8516170131769512745.jpeg/orig",
+    "category": "bakery"
+  },
+  {
+    "id": 13.0,
+    "title": "Чай черный пакетированный \"Beta Tea\" Apple",
+    "price": 670.0,
+    "unit": "шт",
+    "image": "https://www.coffee-tula.ru/site/catalog/pictures/id012796_00.png",
+    "category": "bakery"
+  },
+  {
+    "id": 14.0,
+    "title": "Чай черный \"Принцесса ЯВА\" Каркадэ",
+    "price": 745.0,
+    "unit": "шт",
+    "image": "https://cdn1.ozone.ru/s3/multimedia-c/6321116808.jpg",
+    "category": "bakery"
+  },
+  {
+    "id": 15.0,
+    "title": "Чай черный пакетированный \"Piala\" Fruit Mix",
+    "price": 840.0,
+    "unit": "шт",
+    "image": "https://ir.ozone.ru/s3/multimedia-1-5/c600/7389544937.jpg",
+    "category": "bakery"
+  },
+  {
+    "id": 16.0,
+    "title": "Чай черный пакетированный \"Piala\" с ароматом бергамота и манго",
+    "price": 840.0,
+    "unit": "шт",
+    "image": "https://kzprod.ru/sites/default/files/chernyy_bergamot_i_mango_1.jpg",
+    "category": "bakery"
+  },
+  {
+    "id": 17.0,
+    "title": "Чай черный пакетированный \"Piala\" с лимоном",
+    "price": 840.0,
+    "unit": "шт",
+    "image": "https://metropolis-online.ru/upload/iblock/f6b/v0raff8fb6prehurtw1be8lcbjp6jw6z.png",
+    "category": "bakery"
+  },
+  {
+    "id": 18.0,
+    "title": "Чай зеленый \"АК МАН\" листовой",
+    "price": 820.0,
+    "unit": "шт",
+    "image": "https://ir.ozone.ru/s3/multimedia-x/6676655829.jpg",
+    "category": "bakery"
+  },
+  {
+    "id": 19.0,
+    "title": "Чай черный пакетированный \"CHAMPION\" CEYLON",
+    "price": 660.0,
+    "unit": "шт",
+    "image": "https://resources.cdn-kaspi.kz/img/m/p/h32/h1c/82180075159582.jpg?format=gallery-large",
+    "category": "bakery"
+  },
+  {
+    "id": 20.0,
+    "title": "Чай черный \"Сәуле шәйі\"",
+    "price": 1050.0,
+    "unit": "шт",
+    "image": "https://ir.ozone.ru/s3/multimedia-1-n/7256830271.jpg",
+    "category": "bakery"
+  },
+  {
+    "id": 21.0,
+    "title": "Чай черный пакетированный \"Piala Gold\" кенийский классический",
+    "price": 1785.0,
+    "unit": "шт",
+    "image": "https://static.sevzem.ru/products/1_eDyWWZ-A1tgSMQ.jpg",
+    "category": "bakery"
+  },
+  {
+    "id": 23.0,
+    "title": "Чай черный пакетированный \"SHAH GOLD\" KENYAN",
+    "price": 1780.0,
+    "unit": "шт",
+    "image": "https://basket-15.wbbasket.ru/vol2402/part240236/240236392/images/big/1.webp",
+    "category": "bakery"
+  },
+  {
+    "id": 24.0,
+    "title": "Чай черный \"Piala Gold\" 250г",
+    "price": 1530.0,
+    "unit": "шт",
+    "image": "https://kzprod.ru/sites/default/files/piala_keniya_250_g.png",
+    "category": "bakery"
+  },
+  {
+    "id": 25.0,
+    "title": "Чай черный пакетированный \"Piala Gold\" кенийский классический",
+    "price": 500.0,
+    "unit": "шт",
+    "image": "https://kalam.kz/upload/iblock/b21/vcwlf2yz1gf4qdv7wgte2islfm4j7wzt.jpg",
+    "category": "bakery"
+  },
+  {
+    "id": 26.0,
+    "title": "Чай черный пакетированный \"Piala Gold\" КЕНИЯ классический",
+    "price": 270.0,
+    "unit": "шт",
+    "image": "https://produktoff.kz/pictures/product/middle/33872_middle.png",
+    "category": "bakery"
+  },
+  {
+    "id": 28.0,
+    "title": "Чай черный пакетированный \"ШАХ GOLD\" ИНДИЙСКИЙ",
+    "price": 380.0,
+    "unit": "шт",
+    "image": "https://www.coffee-tula.ru/site/catalog/pictures/id014207_01.png",
+    "category": "bakery"
+  },
+  {
+    "id": 29.0,
+    "title": "Чай черный пакетированный \"ALTYN KENYA\"",
+    "price": 465.0,
+    "unit": "шт",
+    "image": "https://img.b2b.trade/07221715-36f5-44ce-9d24-2ea0eba57263/-/preview/-/format/webp/",
+    "category": "bakery"
+  },
+  {
+    "id": 30.0,
+    "title": "Чай черный пакетированный \"АССАМ\"",
+    "price": 410.0,
+    "unit": "шт",
+    "image": "https://s.f.kz/prod/1755/1754982_1000.jpg",
+    "category": "bakery"
+  },
+  {
+    "id": 31.0,
+    "title": "Чай зеленый \"TESS\" LIME",
+    "price": 1270.0,
+    "unit": "шт",
+    "image": "https://napitki.ru/filestorage/mark2/m2_item_files/thomb-61948c3c82abc8b3b05f5e495f971359.png",
+    "category": "bakery"
+  },
+  {
+    "id": 32.0,
+    "title": "Чай черный \"CHAMPION GOLD\" KENYA SUNSET 100 гр",
+    "price": 695.0,
+    "unit": "шт",
+    "image": "https://ir.ozone.ru/s3/multimedia-1-0/7750531908.jpg",
+    "category": "bakery"
+  },
+  {
+    "id": 42.0,
+    "title": "Бычки обжаренные в томатном соусе 240г",
+    "price": 690.0,
+    "unit": "шт",
+    "image": "https://ir.ozone.ru/multimedia/1035576345.jpg",
+    "category": "meat"
+  },
+  {
+    "id": 43.0,
+    "title": "ШУЖЫК \"КУБЛЕЙ\" 325г",
+    "price": 1750.0,
+    "unit": "шт",
+    "image": "https://produktoff.kz/pictures/product/big/9590_big.jpg",
+    "category": "meat"
+  },
+  {
+    "id": 44.0,
+    "title": "Паштет печеночный с куриной печенью \"ГЛАВПРОДУКТ\" 240г",
+    "price": 595.0,
+    "unit": "шт",
+    "image": "https://resources.cdn-kaspi.kz/img/m/p/hac/h26/80970077863966.jpg?format=preview-medium",
+    "category": "meat"
+  },
+  {
+    "id": 45.0,
+    "title": "Мясо тушеное говядина \"КУБЛЕЙ\" 325г",
+    "price": 2015.0,
+    "unit": "шт",
+    "image": "https://resources.cdn-kaspi.kz/img/m/p/hfa/h36/80844486672414.jpg?format=gallery-large",
+    "category": "meat"
+  },
+  {
+    "id": 46.0,
+    "title": "Мясо тушеное говядина \"СПЕЦЗАКАЗ\" 525г",
+    "price": 1800.0,
+    "unit": "шт",
+    "image": "https://s.f.kz/prod/photo/10939/10938021_1000.jpg",
+    "category": "meat"
+  },
+  {
+    "id": 47.0,
+    "title": "Казы \"КУБЛЕЙ\" 325г",
+    "price": 1750.0,
+    "unit": "шт",
+    "image": "https://resources.cdn-kaspi.kz/img/m/p/h5a/ha4/8084447262238.jpg?format=gallery-large",
+    "category": "meat"
+  },
+  {
+    "id": 48.0,
+    "title": "Паштет шпротный \"КУБЛЕЙ\" 160г",
+    "price": 430.0,
+    "unit": "шт",
+    "image": "https://static.insales-cdn.com/images/products/1/6238/953759838/import_files_32_32025565027f11eb80c4ac1f6bba4f3f_305c145820ec11eb80caac1f6bba4f3f.jpg",
+    "category": "meat"
+  },
+  {
+    "id": 49.0,
+    "title": "Сельдь в масле \"KAIJA\" 240г",
+    "price": 805.0,
+    "unit": "шт",
+    "image": "https://images.uzum.uz/cdp0d78v1htd23ai0spg/original.jpg",
+    "category": "meat"
+  },
+  {
+    "id": 50.0,
+    "title": "Скумбрия в масле \"KAIJA\" 240г",
+    "price": 805.0,
+    "unit": "шт",
+    "image": "https://images.uzum.uz/cfb2b5ov1htd23alooag/original.jpg",
+    "category": "meat"
+  },
+  {
+    "id": 51.0,
+    "title": "Сардины с маслинами \"OMEGIN\" 175г",
+    "price": 1060.0,
+    "unit": "шт",
+    "image": "https://media.vprok.ru/products/x956/34/kf/xubyqkedimnrgtbml7agtwxwlqgokf34.jpeg",
+    "category": "meat"
+  },
+  {
+    "id": 52.0,
+    "title": "Сайра тихоокеанская натуральная \"5 Морей\" 250г",
+    "price": 1210.0,
+    "unit": "шт",
+    "image": "https://main-cdn.sbermegamarket.ru/big1/hlr-system/-90/552/552/462/116/13/100032397232b0.jpg",
+    "category": "meat"
+  },
+  {
+    "id": 53.0,
+    "title": "Паштет с утиной печенью \"ГЛАВПРОДУКТ\" 230г",
+    "price": 860.0,
+    "unit": "шт",
+    "image": "https://cdn1.ozone.ru/s3/multimedia-1-m/7264028614.jpg",
+    "category": "meat"
+  },
+  {
+    "id": 54.0,
+    "title": "Паштет печеночный Деликатесный с гусиной печенью \"ГЛАВПРОДУКТ\" 315г",
+    "price": 920.0,
+    "unit": "шт",
+    "image": "https://d9ae6ad5-3627-4bf2-85a7-22bbd5549e94.selcdn.net/uploads/picture/picture/115926/biggest_4606180001446.JPG",
+    "category": "meat"
+  },
+  {
+    "id": 55.0,
+    "title": "Обжаренная килька в томатном соусе \"За Родину\" 240г",
+    "price": 920.0,
+    "unit": "шт",
+    "image": "https://image.globus.ru/web/08/68/4150868.jpg",
+    "category": "meat"
+  },
+  {
+    "id": 57.0,
+    "title": "Шпроты в масле \"СЕЛЕСТЕ\" 160г",
+    "price": 1070.0,
+    "unit": "шт",
+    "image": "https://s.f.kz/prod/photo/7630/7629453_1000.jpg",
+    "category": "meat"
+  },
+  {
+    "id": 58.0,
+    "title": "Балтийская сардина в масле \"KAIJA\" 240г ",
+    "price": 805.0,
+    "unit": "шт",
+    "image": "https://avatars.mds.yandex.net/get-eda/15135287/0951134312fa17375b9c8432323f5f72/orig",
+    "category": "meat"
+  },
+  {
+    "id": 59.0,
+    "title": "Килька в томатном соусе \"AINA MARE\" 280гр",
+    "price": 730.0,
+    "unit": "шт",
+    "image": "https://imageproxy.wolt.com/assets/68aff2236009a87fc4dfa5fc",
+    "category": "meat"
+  },
+  {
+    "id": 62.0,
+    "title": "Фасоль красная консервированная \"Чистый продукт\"",
+    "price": 410.0,
+    "unit": "шт",
+    "image": "https://avatars.mds.yandex.net/i?id=4add863cd42ef04a6862f3e674953ab9337aa06e-4893408-images-thumbs&n=13",
+    "category": "meat"
+  },
+  {
+    "id": 63.0,
+    "title": "Кукуруза сладкая \"Bonduelle\"",
+    "price": 890.0,
+    "unit": "шт",
+    "image": "https://minio.clevermart.kz/food/images/2024/12/17/4ff21dcc-a680-4bef-8c7d-96dc5ece9f0a/M_3083680002875_1.jpg",
+    "category": "meat"
+  },
+  {
+    "id": 64.0,
+    "title": "Кукуруза сахарная \"100 ПУДОВ\"",
+    "price": 750.0,
+    "unit": "шт",
+    "image": "https://irecommend.ru/sites/default/files/product-images/2014812/DnGA7bldM8uewoTPYDaQ.jpg",
+    "category": "meat"
+  },
+  {
+    "id": 65.0,
+    "title": "Зеленый горошек \"100 ПУДОВ\"",
+    "price": 750.0,
+    "unit": "шт",
+    "image": "https://i.otzovik.com/objects/b/380000/377828.webp",
+    "category": "meat"
+  },
+  {
+    "id": 87.0,
+    "title": "Энергетик GORILLA ENERGY Drink 0,45 Ж/Б",
+    "price": 570.0,
+    "unit": "шт",
+    "image": "https://semeiniy.kz/wa-data/public/shop/products/36/80/98036/images/47619/47619.750x0.jpg",
+    "category": "dairy"
+  },
+  {
+    "id": 88.0,
+    "title": "Pepsi 2L",
+    "price": 905.0,
+    "unit": "шт",
+    "image": "https://ir.ozone.ru/s3/multimedia-u/6634092486.jpg",
+    "category": "dairy"
+  },
+  {
+    "id": 89.0,
+    "title": "Pepsi 1L",
+    "price": 650.0,
+    "unit": "шт",
+    "image": "https://main-cdn.sbermegamarket.ru/big2/hlr-system/120/720/784/512/230/21/100046986096b0.jpg",
+    "category": "dairy"
+  },
+  {
+    "id": 90.0,
+    "title": "Mirinda 2L",
+    "price": 900.0,
+    "unit": "шт",
+    "image": "https://semeiniy.kz/wa-data/public/shop/products/55/62/126255/images/38912/38912.750x0.jpg",
+    "category": "dairy"
+  },
+  {
+    "id": 91.0,
+    "title": "Coca-Cola Classic 2L",
+    "price": 900.0,
+    "unit": "шт",
+    "image": "https://avatars.mds.yandex.net/i?id=28f402842440f025dd82a49150edcfe9de2a55b8-5250377-images-thumbs&n=13",
+    "category": "dairy"
+  },
+  {
+    "id": 92.0,
+    "title": "Coca-Cola Classic-1,5L",
+    "price": 800.0,
+    "unit": "шт",
+    "image": "https://s.mozzarella.space/pic/000008217_big.jpg",
+    "category": "dairy"
+  },
+  {
+    "id": 93.0,
+    "title": "Coca-Cola Classic -1L",
+    "price": 650.0,
+    "unit": "шт",
+    "image": "https://avatars.mds.yandex.net/get-eda/12773219/88ab8dd00417f3c86843d8f256a4b671/orig",
+    "category": "dairy"
+  },
+  {
+    "id": 94.0,
+    "title": "Sprite 2L",
+    "price": 900.0,
+    "unit": "шт",
+    "image": "https://sokovoz.ru/_sh/49/4966.jpg",
+    "category": "dairy"
+  },
+  {
+    "id": 95.0,
+    "title": "Fanta 2L",
+    "price": 900.0,
+    "unit": "шт",
+    "image": "https://api.technodom.kz/f3/api/v1/images/800/800/af_0b107a3973a83aae079e92707a80ab9f.jpg",
+    "category": "dairy"
+  },
+  {
+    "id": 96.0,
+    "title": "Квас Купеческий(ржаной) 1,5L",
+    "price": 400.0,
+    "unit": "шт",
+    "image": "https://minio.clevermart.kz/food/images/2022/4/25/41ab92b1-31bd-4ab2-80e6-9e60d43a2378/M_4870144472461_1.jpg",
+    "category": "dairy"
+  },
+  {
+    "id": 97.0,
+    "title": "Квас нефильтрованный (желтая бочка) 1,5 L",
+    "price": 860.0,
+    "unit": "шт",
+    "image": "https://avatars.mds.yandex.net/get-marketpic/12422235/pic3e2c24f70db5b6f669ba18a4063ec6cb/orig",
+    "category": "dairy"
+  },
+  {
+    "id": 99.0,
+    "title": "Tofik (карамельное яблоко) 0,5",
+    "price": 215.0,
+    "unit": "шт",
+    "image": "https://cdn.carefood.kz/assets/0d/77/c9/f2/0d77c9f25f0f254b2681ed9e7906fbe4---png_710x_83b40_convert.png",
+    "category": "dairy"
+  },
+  {
+    "id": 100.0,
+    "title": "Borjomi 0,5",
+    "price": 920.0,
+    "unit": "шт",
+    "image": "https://rusbeershop.ru/upload/iblock/13b/bs481ofszadudw8jhbdo2tvi2ozdb0a4/voda_pitevaya_borzhomi_gazirovannaya_0_5_l_.jpg",
+    "category": "dairy"
+  },
+  {
+    "id": 101.0,
+    "title": "Lavina energy original 0,45",
+    "price": 340.0,
+    "unit": "шт",
+    "image": "https://tamak.kg/yasin-kafe-osh/upload/ЛАВИНА_1744808214.jpg",
+    "category": "dairy"
+  },
+  {
+    "id": 102.0,
+    "title": "Lavina energy Turbo 0,45",
+    "price": 340.0,
+    "unit": "шт",
+    "image": "https://imageproxy.wolt.com/menu/menu-images/63f5ad4febb451ccc8682cfa/fa0b861e-74f4-11ef-8334-b6e2d85174aa_4870001572099.jpg",
+    "category": "dairy"
+  },
+  {
+    "id": 103.0,
+    "title": "Энергетик Баста 0,33",
+    "price": 615.0,
+    "unit": "шт",
+    "image": "https://images-foodtech.magnit.ru/gdh8R94_ZaQe6EDvAMDPTeq1nWVpcofR8Za-09DcrJ8/rs:fit:1600:1600/plain/s3:/img-dostavka/catalog/uf/375/37555e7b86d7d1d702bd315679f23845/f68884cc112db0f6d9c195217c277c5f.jpeg@webp",
+    "category": "dairy"
+  },
+  {
+    "id": 104.0,
+    "title": "Dr. Essent N17 0,5",
+    "price": 550.0,
+    "unit": "шт",
+    "image": "https://avatars.mds.yandex.net/i?id=7974e3fa28113577c8ce8762d935a11af85da51c-5341407-images-thumbs&n=13",
+    "category": "dairy"
+  },
+  {
+    "id": 105.0,
+    "title": "Da Da Leto (апельсин) 1L ",
+    "price": 650.0,
+    "unit": "шт",
+    "image": "https://arbuz.kz/image/s3/arbuz-kz-products/image__235852-sok_dada_pet_apelsin_i_lemongrass_1_l.jpg?w=720&h=720&_c=1759319637",
+    "category": "dairy"
+  },
+  {
+    "id": 106.0,
+    "title": "Fuse tea 1L ( ромашка манго)",
+    "price": 575.0,
+    "unit": "шт",
+    "image": "https://semeiniy.kz/wa-data/public/shop/products/47/76/87647/images/24337/24337.750x0.jpg",
+    "category": "dairy"
+  },
+  {
+    "id": 107.0,
+    "title": "Fuse tea 1L ( Арбуз)",
+    "price": 575.0,
+    "unit": "шт",
+    "image": "https://semeiniy.kz/wa-data/public/shop/products/99/85/108599/images/46722/46722.970.jpg",
+    "category": "dairy"
+  },
+  {
+    "id": 108.0,
+    "title": "Da Da Leto ( Ягоды- каракаде) 1L",
+    "price": 625.0,
+    "unit": "шт",
+    "image": "https://yastatic.net/avatars/get-grocery-goods/5416507/be4c8b1e-803a-44e1-badb-6c77f0d3a12f/600x600?webp=true",
+    "category": "dairy"
+  },
+  {
+    "id": 109.0,
+    "title": "Alex Saryagash 1,5",
+    "price": 385.0,
+    "unit": "шт",
+    "image": "https://arbuz.kz/image/s3/arbuz-kz-products/f391b805-4bf4-4d81-89f3-50d89900a416-57345-001_jpg.jpg?w=720&h=720&_c=1716808597",
+    "category": "dairy"
+  },
+  {
+    "id": 110.0,
+    "title": "Немецкое Бочкари св. фильт 0,44",
+    "price": 525.0,
+    "unit": "шт",
+    "image": "https://rosal24.ru/upload/iblock/a9a/vlpzd8nj4wus4yvn79pj0kfqgtpnq13d/qv9gjdozzvzj4cgijfcesuzyfp3huurj-Photoroom.webp",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 111.0,
+    "title": "Диззи Энерджи 0,33 original",
+    "price": 450.0,
+    "unit": "шт",
+    "image": "https://imageproxy.wolt.com/menu/menu-images/644a4c5dd1f77310530152a9/b8968090-1e8f-11f0-9567-56a3b5def09a_1744200937.jpg",
+    "category": "dairy"
+  },
+  {
+    "id": 113.0,
+    "title": "Коньяк 0,5 Александр 5*",
+    "price": 2370.0,
+    "unit": "шт",
+    "image": "https://winestyle.ru/products/Alexander-5-stars.html#product-image-preview",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 114.0,
+    "title": "Хаома 0,7 оригинал 40% водка",
+    "price": 3750.0,
+    "unit": "шт",
+    "image": "https://luxalcomarket.kz/assets/images/products/4870031007066.jpg",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 116.0,
+    "title": "Коньяк 0,5 Бахус Vintage Georgia 3*",
+    "price": 1750.0,
+    "unit": "шт",
+    "image": "https://bacchus.kz/production/konak-trehletnij-bacchus-vintage-georgia",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 117.0,
+    "title": "Коньяк 0,5 Бахус Vintage France 3*",
+    "price": 1750.0,
+    "unit": "шт",
+    "image": "https://bacchus.kz/production/konak-trehletnij-bacchus-vintage-france",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 120.0,
+    "title": "Старый доктор 0,5 водка",
+    "price": 1920.0,
+    "unit": "шт",
+    "image": "https://luxalcomarket.kz/assets/images/products/4870017005604.jpg",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 124.0,
+    "title": "Синяя гора 0,5 водка",
+    "price": 1600.0,
+    "unit": "шт",
+    "image": "https://luxalcomarket.kz/assets/images/products/4870031007851.jpg",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 125.0,
+    "title": "Wolf 0,45 водка",
+    "price": 1550.0,
+    "unit": "шт",
+    "image": "https://luxalcomarket.kz/assets/images/products/4870031008025.jpg",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 128.0,
+    "title": "Хортиця 0,5 водка",
+    "price": 2920.0,
+    "unit": "шт",
+    "image": "https://elitclub.kz/upload/images/87446_216331_04.jpg",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 135.0,
+    "title": "Балтика №9 0,45 крепкое ж/б пиво 1/24, шт",
+    "price": 530.0,
+    "unit": "шт",
+    "image": "https://produktoff.kz/pictures/product/big/23704_big.png",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 136.0,
+    "title": "Балтика №7 0,45 мл ж/б пиво 1/24, шт",
+    "price": 530.0,
+    "unit": "шт",
+    "image": "https://produktoff.kz/pictures/product/big/23707_big.png",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 138.0,
+    "title": "Жигулевское разливное 0,45 ж/б 4,5% пив. 1/24, шт",
+    "price": 600.0,
+    "unit": "шт",
+    "image": "https://produktoff.kz/pictures/product/big/23413_big.png",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 140.0,
+    "title": "Эфес светлое 0,5 ст. пив. 1/20, шт",
+    "price": 630.0,
+    "unit": "шт",
+    "image": "https://xn--h1aabcfhjebgmqt3a.kz/image/cache/catalog/products/pivo/efes1-500x500.png",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 141.0,
+    "title": "Миллер 0,5 ст. 4,4% пив. 1/20, шт",
+    "price": 850.0,
+    "unit": "шт",
+    "image": "https://www.luxalcomarket.kz/assets/images/products/4870003986290.jpg",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 142.0,
+    "title": "Кружка свежего мягкое 0,475 ст. 4% пив. 1/20, шт",
+    "price": 560.0,
+    "unit": "шт",
+    "image": "https://alco24.kz/wp-content/uploads/2021/10/50239_994547_04.jpeg",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 143.0,
+    "title": "Кружка свежего мягкое 0,45 ж/б 4% пив. 1/24, шт",
+    "price": 560.0,
+    "unit": "шт",
+    "image": "https://magnumopt.kz/upload/iblock/09f/09fbd82905564b4c5488654c854c118a.png",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 144.0,
+    "title": "Хмельной лось крепкое 0,45 ж/б 7,3% пив. 1/24, шт",
+    "price": 500.0,
+    "unit": "шт",
+    "image": "https://magnumopt.kz/upload/iblock/c1f/c1f02602c06044fd78d493261a03d5d7.png",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 145.0,
+    "title": "Белый медведь светлое 0,45 4,8% ж/б пив. 1/24, шт",
+    "price": 480.0,
+    "unit": "шт",
+    "image": "https://produktoff.kz/pictures/product/big/26242_big.png",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 148.0,
+    "title": "Холстен свет. Holsten Light 0,5 мл стек. пиво 1/20, шт",
+    "price": 710.0,
+    "unit": "шт",
+    "image": "https://firkan24.kz/wp-content/uploads/2024/11/%D0%9F%D0%B8%D0%B2%D0%BE-holsten-light0.5%D0%BB%D1%81%D1%82.%D0%B1.webp",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 149.0,
+    "title": "Холстен Holsten pilsner 0,5 стекло пиво зел. 1/20, шт",
+    "price": 710.0,
+    "unit": "шт",
+    "image": "https://proviant.kz/images/stories/virtuemart/product/_________HOLSTEN_4b057503ba917.jpg",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 150.0,
+    "title": "Гараж Вишня 0,40 ст.пиво 1/20, шт",
+    "price": 680.0,
+    "unit": "шт",
+    "image": "https://alco24.kz/wp-content/uploads/2021/10/57046_832088_04.jpeg",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 151.0,
+    "title": "Гараж Лимон 0,40 ст.пиво 1/20, шт",
+    "price": 680.0,
+    "unit": "шт",
+    "image": "https://xn--h1aabcfhjebgmqt3a.kz/image/cache/catalog/products/pivo/garage-500x500.jpg",
+    "category": "vegetables-fruits"
+  },
+  {
+    "id": 197.0,
+    "title": "Талка 0,5 водка",
+    "price": 3250.0,
+    "unit": "шт",
+    "image": "https://static.insales-cdn.com/images/products/1/4938/988664650/img_products_talka-osobaya-500ml-1.webp",
+    "category": "vegetables-fruits"
+  }
+]

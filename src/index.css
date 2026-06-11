@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-emerald-505: #22c55e;
+  --font-exotic: "Space Grotesk", sans-serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@700;900&display=swap');
+
+/* Dynamic custom utility extensions */
+body {
+  background-color: #f9fafb;
+  -webkit-tap-highlight-color: transparent; /* Disable default tap halos on mobile */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Scrollbar aesthetic isolation */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* iOS Safe areas compliance */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* Hide incrementing arrows on numeric budget input boxes */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Beautiful micro-fade actions on page loading */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+main {
+  animation: fadeIn 0.4s ease-out;
+}

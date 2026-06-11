@@ -1,0 +1,6 @@
+{
+  "name": "Tranzit Market",
+  "description": "Доставка свежих продуктов и напитков в п. Осакаровка",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
